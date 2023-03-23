@@ -1,3 +1,13 @@
+// TOGGLE BURGER DROP DOWN MENU
+
+const burgerIcon = document.querySelector('#burger');
+const navbarMenu = document.querySelector('#nav-links');
+
+burgerIcon.addEventListener('click', () => {
+    navbarMenu.classList.toggle('is-active')
+});
+
+
 // creates the variable for the #brew-btn
 var searchFormEl = document.querySelector('#brew-btn');
 
@@ -44,3 +54,5 @@ function searchResult(city){
 }
 
 $("#search").on("click",displayBreweries);
+
+
