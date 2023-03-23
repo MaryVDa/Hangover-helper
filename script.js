@@ -1,12 +1,3 @@
-// TOGGLE BURGER DROP DOWN MENU
-
-const burgerIcon = document.querySelector('#burger');
-const navbarMenu = document.querySelector('#nav-links');
-
-burgerIcon.addEventListener('click', () => {
-    navbarMenu.classList.toggle('is-active')
-});
-
 
 // creates the variable for the #brew-btn
 var searchFormEl = document.querySelector('#brew-btn');
@@ -14,7 +5,7 @@ var searchFormEl = document.querySelector('#brew-btn');
 function handleSearchFormSubmit(event) {
     event.preventDefault();
 
-    var searchInputVal = document.querySelector('#search-value').value;
+    var searchInputVal = document.querySelector('#brew-search').value;
 
     if (!searchInputVal) {
         console.error('You need a search input value!');
@@ -32,6 +23,16 @@ function handleSearchFormSubmit(event) {
 var city="";
 var searchCity = $("#search");
 var currentCity = $("#results")
+var sCity=[];
+
+function find(c){
+    for (var i=0; i<sCity.length; i++){
+        if(c.toUpperCase()===sCity[i]){
+            return -1;
+        }
+    }
+    return 1;
+}
 
 function displayBreweries(event) {
     event.preventDefault();
@@ -42,7 +43,7 @@ function displayBreweries(event) {
 }
 
 function searchResult(city){
-    var queryURL="https://api.openbrewerydb.org/breweries?q=" + "by_city" + "=&per_page=3";
+    var queryURL="https://api.openbrewerydb.org/breweries?by_city=" + city + "=&per_page=3";
     $.ajax({
         url:queryURL,
         method:"GET",
@@ -50,8 +51,27 @@ function searchResult(city){
         console.log(response);
 
         $(currentCity).html(response.name)
-    })
+
+        Results(response.id);
+        if(response.cod==200){
+            sCity=JSON.parse(localStorage.getItem("cityname"));
+            console.log(sCity);
+        if (sCity==null){
+            sCity=[];
+            sCity.push(city.toUpperCase());
+            localStorage.setItem("cityname",JSON.stringify(sCity));
+            addToList(city);
+        }else {
+            if(find(city)>0){
+                sCity.push(city.toUpperCase());
+                localStorage.setItem("cityname",JSON.stringify(sCity));
+                addToList(city);
+                }
+            }
+        }
+    }); 
 }
+
 
 $("#search").on("click",displayBreweries);
 
