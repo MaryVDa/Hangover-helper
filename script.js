@@ -18,3 +18,29 @@ function handleSearchFormSubmit(event) {
     localStorage.setItem("weather-dashboard",JSON.stringify(localSt))
     displayLS()
 }
+
+var city="";
+var searchCity = $("#search");
+var currentCity = $("#results")
+
+function displayBreweries(event) {
+    event.preventDefault();
+    if (searchCity.val().trim()!==""){
+        city=searchCity.val().trim();
+        searchResult(city);
+    }
+}
+
+function searchResult(city){
+    var queryURL="https://api.openbrewerydb.org/breweries?q=" + "by_city" + "=&per_page=3";
+    $.ajax({
+        url:queryURL,
+        method:"GET",
+    }).then(function(response){
+        console.log(response);
+
+        $(currentCity).html(response.name)
+    })
+}
+
+$("#search").on("click",displayBreweries);
