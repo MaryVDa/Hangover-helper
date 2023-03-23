@@ -1,17 +1,41 @@
+html {
+    background-color: #a87027fd;
+    width: 100%;
+    height: 100vh
+}
 h1 {
     text-align: center;
+}
+
+.mb-3 {
+    text-align: center;
+    background-color: #FFDB3A;
 }
 
 main {
 height: 100%;
 }
 .card {
-    width: 250px;
+    
     
 }
 
 body {
-width: 100%;
-height: 84.5vh;
-background-color: #a87027cc;
+height: 89vh;
+
 }
+
+/* SIDE BY SIDE DIVS */
+
+.flex-container {
+    display: flex;
+}
+
+.flex-child {
+    flex: 1;
+    border: 2px solid BLACK;
+}  
+
+.flex-child:first-child {
+    margin-right: 20px;
+} 

@@ -11,21 +11,57 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <header class="text-center header">
-    <h1>Hangover Helper</h1>
-    <nav>
-        <ul>
-            <li><a class = "button is-danger" href="index.html">Home</a></li>
-        </ul>
-    </nav>
+                                                    <!-- ------ -->
+                                                    <!-- HEADER -->
+                                                    <!-- ------ -->
+        
+    <header>
+       
+    <h1 class="is-size-1">Hangover Helper</h1>
+   
+                                                    <!-- ------ -->
+                                                    <!-- NavBar -->
+                                                    <!-- ------ -->
+
+<nav class="navbar has-shadow">
+
+    <!-- Logo(s) may go here -->
+
+    <div class="navbar-brand">
+        <a class="navbar-item">
+            <img src="" alt="Site Logo"> 
+        </a>
+
+        <!-- DROP DOWN MENU -->
+        <a class="navbar-burger" id="burger">
+        <span>    </span>
+        <span>    </span>
+        <span>    </span>
+    </a>
+    </div>
+
+                <!-- NavBar Links -->
+
+    <div class="navbar-menu" id="nav-links">
+        <div class="navbar-end"></div>
+        <a  class="navbar-item">option 1</a>
+        <a  class="navbar-item">option 2</a>
+        <a  class="navbar-item">option 3</a>
+    </div>
+</nav>
+
+                                                    <!-- ------- -->
+                                                  <!-- MAIN MESSAGE -->
+                                                    <!-- ------- -->
+
     </header>
     <main class="container-fluid">
         <div class="row">
             <div class="col-md col-xl-4">
-                <div class="card mb-3">
-                <h2 class="">What is a hangover?</h2>
+                <div class="card mb-3 py-4 px-6">
+                <h2 class="is-size-4">What is a hangover?</h2>
                 <div class="card-body">
-                <p class="card-text">
+                <p class="card-text py-4">
                     A hangover is a group of unpleasant signs and symptoms that can occur after drinking too 
                     much alcohol. The severity of the hangover depends on the amount of alcohol consumed, 
                     the amount of water drunk, and the individual's metabolism. The most common symptoms 
@@ -36,21 +72,41 @@
                 </div>
                 </div>
                 <div>
-                    <h2 class="">Search a city name!</h2>
-                    <input type="text" id="brew-search" placeholder="e.g. Detroit">
-                    <!-- added id of "brew-btn" to the button for searching up breweries -->
-                    <button class = "button is-success" id="brew-btn">Brew up some bars!</button>
-                    <div id="results"></div>
+                    
+                                                    
+                    
                 </div>
             </div>
         </div>
+                                                    <!-- ------ -->
+                                                 <!-- MAIN CONTENT -->
+                                                    <!-- ------ -->
+        <div class="main-content">
+            <div class="flex-container">
+                <!-- SEARCH -->
 
+            <div class="search flex-child">
+            <h2 class="">Search a city name!</h2>
+            <input type="text" id="brew-search" placeholder="e.g. Detroit">
+        <!-- added id of "brew-btn" to the button for searching up breweries -->
+            <button class = "button is-success" id="brew-btn">Brew up some bars!</button>
+    </div>
+                <!-- RESULTS -->
+
+    <div class="Results flex-child">
+            
+    </div>
+    </div>
+</div>
     </main>
     
-    
+                                                    <!-- ------ -->
+                                                    <!-- FOOTER -->
+                                                    <!-- ------ -->
     <footer class="">
         <p>Hangover Helper &copy; 2023</p>
+    
+</body>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="script.js"></script>
-</body>
 </html>
