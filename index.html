@@ -4,15 +4,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hangover Helper</title>
+    
+    <!-- This will link Bulma styling to our webpage. -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <header class="text-center header">
     <h1>Hangover Helper</h1>
-    <h2>Got hangover? We'll help!</h2>
+
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a class = "button is-danger" href="index.html">Home</a></li>
         </ul>
     </nav>
     </header>
@@ -33,9 +37,10 @@
                 </div>
                 </div>
                 <div>
-                    <h2 class="">Find a Bar !</h2>
-                    <input type="text" id="search" placeholder="Search...">
-                    <button id="searchBtn">Search</button>
+                    <h2 class="">Search a city name!</h2>
+                    <input type="text" id="brew-search" placeholder="e.g. Detroit">
+                    <!-- added id of "brew-btn" to the button for searching up breweries -->
+                    <button class = "button is-success" id="brew-btn">Brew up some bars!</button>
                     <div id="results"></div>
                 </div>
             </div>
