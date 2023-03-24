@@ -9,7 +9,7 @@ h1 {
 
 .mb-3 {
     text-align: center;
-    background-color: #FFDB3A;
+    background-color: rgb(255, 255, 0);
 }
 
 main {
@@ -33,9 +33,31 @@ height: 89vh;
 
 .flex-child {
     flex: 1;
+    margin-top: 20vh;
+    background-color: rgb(255, 255, 0);
     border: 2px solid BLACK;
-}  
-
-.flex-child:first-child {
-    margin-right: 20px;
+    text-align: center;
 } 
+
+/* Left Side (Search) */
+.flex-child:first-child {
+    height:210px;
+    border-radius: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* Right Side (Results) */
+.flex-child:nth-child(2) {
+    height: 500px;
+    border-radius: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+
+.input-box {
+    width: 20vh;
+    height:3vh;
+    border-radius: 10%;
+}

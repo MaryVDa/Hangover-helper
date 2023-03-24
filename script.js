@@ -7,6 +7,13 @@ burgerIcon.addEventListener('click', () => {
     navbarMenu.classList.toggle('is-active')
 });
 
+// Brew button color change !!!WIP!!!
+
+const brewButton = document.querySelector('#brew-btn')
+brewButton.addEventListener('click', ()=>{
+brewButton.classList.toggle('is-success')
+});
+
 
 // creates the variable for the #brew-btn
 var searchFormEl = document.querySelector('#brew-btn');
