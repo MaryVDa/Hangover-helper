@@ -1,3 +1,18 @@
+
+// ABOUT US MODAL
+
+const aboutBtn = document.querySelector('#about');
+const modalBg = document.querySelector('.modal-background');
+const aboutModal = document.querySelector(".modal");
+
+aboutBtn.addEventListener('click', () => {
+     aboutModal.classList.add('is-active');
+});
+
+modalBg.addEventListener('click', () => {
+    aboutModal.classList.remove('is-active');
+});
+
 // TOGGLE BURGER DROP DOWN MENU
 
 const burgerIcon = document.querySelector('#burger');
@@ -61,5 +76,8 @@ function searchResult(city){
 }
 
 $("#search").on("click",displayBreweries);
+
+
+
 
 
