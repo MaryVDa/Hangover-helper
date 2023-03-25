@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hangover Helper</title>
+<<<<<<< Updated upstream
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -38,8 +39,82 @@
                     <button id="searchBtn">Search</button>
                     <div id="results"></div>
                 </div>
-            </div>
+=======
+
+    <!-- This will link Bulma styling to our webpage. -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- ------ -->
+    <!-- HEADER -->
+    <!-- ------ -->
+
+    <header>
+      <h1 class="is-size-1">Hangover Helper</h1>
+
+      <!-- ------ -->
+      <!-- NavBar -->
+      <!-- ------ -->
+
+      <nav class="navbar has-shadow container-fluid">
+        <!-- Logo(s) may go here -->
+
+        <div class="navbar-brand">
+          <a class="navbar-item -is size-1">
+            <img src="/images/quality.png" alt="Site Logo" />
+          </a>
+
+          <!-- DROP DOWN MENU -->
+          <a class="navbar-burger" id="burger">
+            <span> </span>
+            <span> </span>
+            <span> </span>
+          </a>
         </div>
+
+        <!-- NavBar Links -->
+
+        <div class="navbar-menu" id="nav-links">
+          <div class="navbar-end"></div>
+          <a class="navbar-item">option 1</a>
+          <a class="navbar-item">option 2</a>
+          <a class="navbar-item">option 3</a>
+        </div>
+      </nav>
+
+      <!-- ------- -->
+      <!-- MAIN MESSAGE -->
+      <!-- ------- -->
+    </header>
+    <main class="container-fluid">
+      <div class="row">
+        <div class="col-md col-xl-4">
+          <div class="card mb-3 py-4 px-6">
+            <h2 class="is-size-4">What is a Hangover?</h2>
+            <div class="card-body">
+              <p class="card-text py-4">
+                A hangover is a group of unpleasant signs and symptoms that can
+                occur after drinking too much alcohol. The severity of the
+                hangover depends on the amount of alcohol consumed, the amount
+                of water drunk, and the individual's metabolism. The most common
+                symptoms are headache, fatigue, dizziness, nausea, vomiting,
+                sensitivity to light and sound, and thirst. Other symptoms may
+                include anxiety, confusion, depression, sweating, and difficulty
+                sleeping. The severity of the hangover can be reduced by
+                drinking water, eating food, and taking medications such as
+                paracetamol or ibuprofen.
+              </p>
+>>>>>>> Stashed changes
+            </div>
+          </div>
+          <div></div>
+        </div>
+<<<<<<< Updated upstream
 
     </main>
     
@@ -49,3 +124,80 @@
     <script src="js/script.js"></script>
 </body>
 </html>
+=======
+      </div>
+      <!-- ------ -->
+      <!-- MAIN CONTENT -->
+      <!-- ------ -->
+      <div class="main-content">
+        <div class="flex-container">
+          <!-- SEARCH -->
+
+          <div class="search flex-child">
+            <div class="bar-search">
+              <!-- City Search Box  -->
+
+              <div class="by-city">
+                <h2>Enter a City Name</h2>
+                <input
+                  class="input-box"
+                  type="text"
+                  id="brew-search"
+                  placeholder="e.g. Detroit"
+                />
+              </div>
+
+              <!-- Search button for breweries -->
+              <button class="button is-success is-light" id="brew-btn">
+                Check out some Bars!
+              </button>
+
+              <!-- ABV Search Box -->
+
+              <div class="by-abv py-3">
+                <h2>Enter an ABV%</h2>
+                <input
+                  class="input-box"
+                  type="text"
+                  id="beer-value"
+                  placeholder="e.g. 5.0"
+                />
+              </div>
+
+              <!-- Search Button For ABV -->
+              <button class="button is-primary is-light" id="beer-btn">
+                Brew up some Beers!
+              </button>
+            </div>
+          </div>
+          <!-- RESULTS -->
+
+          <div class="results flex-child">
+            <div class="results-area" id="results-area">
+              <h2>Results go here</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- ------ -->
+    <!-- FOOTER -->
+    <!-- ------ -->
+    <footer class="">
+      <p>Hangover Helper &copy; 2023</p>
+
+      <a href="https://www.flaticon.com/free-icons/beer" title="beer icons"
+        >Beer icons created by dDara - Flaticon</a
+      >
+      <a href="https://www.flaticon.com/free-icons/beer" title="beer icons"
+        >Beer icons created by dDara - Flaticon</a
+      >
+      <a href="https://www.flaticon.com/free-icons/beer" title="beer icons"
+        >Beer icons created by dDara - Flaticon</a
+      >
+    </footer>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+>>>>>>> Stashed changes
