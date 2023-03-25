@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 // TOGGLE BURGER DROP DOWN MENU
 
 const burgerIcon = document.querySelector("#burger");
@@ -94,4 +92,3 @@ function getAPIData(beer) {
 //End Nick Loeffler 3-24 JS
 
 $("#brew-search").on("click", displayBreweries);
->>>>>>> Stashed changes
