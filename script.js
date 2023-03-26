@@ -1,16 +1,29 @@
-
 // ABOUT US MODAL
 
-const aboutBtn = document.querySelector('#about');
-const modalBg = document.querySelector('.modal-background');
+const aboutBtn = document.querySelector("#about");
+const modalBg = document.querySelector(".modal-background");
 const aboutModal = document.querySelector(".modal");
 
-aboutBtn.addEventListener('click', () => {
-     aboutModal.classList.add('is-active');
+aboutBtn.addEventListener("click", () => {
+  aboutModal.classList.add("is-active");
 });
 
-modalBg.addEventListener('click', () => {
-    aboutModal.classList.remove('is-active');
+modalBg.addEventListener("click", () => {
+  aboutModal.classList.remove("is-active");
+});
+
+// Nick Loeffler 3-26 How To Modal
+
+const howToBtn = document.querySelector("#how-to");
+const howToBg = document.querySelector("#how-bg");
+const howToModal = document.querySelector("#modal2");
+
+howToBtn.addEventListener("click", () => {
+  howToModal.classList.add("is-active");
+});
+
+howToBg.addEventListener("click", () => {
+  howToModal.classList.remove("is-active");
 });
 
 // TOGGLE BURGER DROP DOWN MENU
@@ -107,4 +120,3 @@ function getAPIData(beer) {
 //End Nick Loeffler 3-24 JS
 
 $("#brew-search").on("click", displayBreweries);
-
