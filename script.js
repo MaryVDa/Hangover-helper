@@ -104,7 +104,7 @@ function getAPIData(beer) {
 
       for (let index = 0; index < response.length; index++) {
         const beer = response[index];
-        var beerCard = `<div class="card has-background-success" style="width:25rem; height:auto; margin:8px;">
+        var beerCard = `<div class="card has-background-success" style="width:15rem; height:auto; margin:8px;">
         <div class="card-content">
         <h5 class="card-header">${beer.name}</h5>
         <p class="card-text">ABV: ${beer.abv}</p>
