@@ -19,45 +19,41 @@
     <!-- ------ -->
 
     <header>
+      <h1 class="is-size-1">Hangover Helper</h1>
 
-       
-    <h1 class="is-size-1">Hangover Helper</h1>
-   
-                                                    <!-- ------ -->
-                                                    <!-- NavBar -->
-                                                    <!-- ------ -->
+      <!-- ------ -->
+      <!-- NavBar -->
+      <!-- ------ -->
 
-<nav class="navbar has-shadow container-fluid">
+      <nav class="navbar has-shadow container-fluid">
+        <!-- Logo(s) may go here -->
 
-    <!-- Logo(s) may go here -->
+        <div class="navbar-brand">
+          <a class="navbar-item -is size-1">
+            <img src="/images/quality.png" alt="Site Logo" />
+          </a>
 
-    <div class="navbar-brand">
-        <a class="navbar-item -is size-1">
-            <img src="/images/quality.png" alt="Site Logo"> 
-        </a>
+          <!-- DROP DOWN MENU -->
+          <a class="navbar-burger" id="burger">
+            <span> </span>
+            <span> </span>
+            <span> </span>
+          </a>
+        </div>
 
-        <!-- DROP DOWN MENU -->
-        <a class="navbar-burger" id="burger">
-        <span>    </span>
-        <span>    </span>
-        <span>    </span>
-    </a>
-    </div>
+        <!-- NavBar Links -->
 
-                <!-- NavBar Links -->
+        <div class="navbar-menu" id="nav-links">
+          <div class="navbar-end"></div>
+          <a class="navbar-item is-success" id="how-to">How it Works</a>
+          <a class="navbar-item">option 2</a>
+          <a class="navbar-item" id="about">About Us</a>
+        </div>
+      </nav>
 
-    <div class="navbar-menu" id="nav-links">
-        <div class="navbar-end"></div>
-        <a  class="navbar-item">option 1</a>
-        <a  class="navbar-item">option 2</a>
-        <a  class="navbar-item" id="about">About Us</a>
-    </div>
-</nav>
-
-                                                    <!-- ------- -->
-                                                  <!-- MAIN MESSAGE -->
-                                                    <!-- ------- -->
-
+      <!-- ------- -->
+      <!-- MAIN MESSAGE -->
+      <!-- ------- -->
 
       <!-- ------- -->
       <!-- MAIN MESSAGE -->
@@ -144,27 +140,67 @@
     <!-- FOOTER -->
     <!-- ------ -->
     <footer class="">
+      <p>Hangover Helper &copy; 2023</p>
 
-        <p>Hangover Helper &copy; 2023</p>
-
-    
-        
-        <a href="https://www.flaticon.com/free-icons/beer" title="beer icons">Beer icons created by dDara - Flaticon</a>
-        <a href="https://www.flaticon.com/free-icons/beer" title="beer icons">Beer icons created by dDara - Flaticon</a>
-        <a href="https://www.flaticon.com/free-icons/beer" title="beer icons">Beer icons created by dDara - Flaticon</a>
+      <a href="https://www.flaticon.com/free-icons/beer" title="beer icons"
+        >Beer icons created by dDara - Flaticon</a
+      >
+      <a href="https://www.flaticon.com/free-icons/beer" title="beer icons"
+        >Beer icons created by dDara - Flaticon</a
+      >
+      <a href="https://www.flaticon.com/free-icons/beer" title="beer icons"
+        >Beer icons created by dDara - Flaticon</a
+      >
     </footer>
 
     <!--MODAL-->
-    <div class="modal ">
-        <div class="modal-background"></div>
-        <div class="modal-content has-background-white py-5 px-5">
-            <h3 class="title mb-6">About Us</h3>
-        </div>
+    <div class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content has-background-white py-5 px-5">
+        <h3 class="title mb-6">About Us</h3>
+      </div>
     </div>
 
+    <!-- Modal #2 -->
+    <!-- Nick Loeffler 3-26 -->
 
-</body>
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="script.js"></script>
+    <div class="modal" id="modal2">
+      <div class="modal-background" id="how-bg"></div>
+      <div class="modal-content has-background-white py-5 px-5">
+        <h3 class="title is-spaced mb-6">How it Works</h3>
+        <h4 class="subtitle is-spaced is-5">How to find breweries</h4>
+        <ul>
+          <li>1. Figure out what city you'll be drinking in tonight.</li>
+          <li>
+            2. Locate the search bar titled "Enter a City Name" and type your
+            city.
+          </li>
+          <li>3. Click the "Check out some Bars!" button.</li>
+          <li>
+            Finally, a list of 5 bars in or near that city will now be displayed
+            to the right hand side!
+          </li>
+        </ul>
+
+        <h4 class="subtitle is-spaced is-5">
+          How to find beers above a certain ABV
+        </h4>
+        <ul>
+          <li>1. Think of the right ABV percentage for the night.</li>
+          <li>
+            2. Locate the search bar titled "Enter an ABV%" and type your
+            percentage in the search bar, using numbers.
+          </li>
+          <li>3. Click the "Brew up some Beers!" button</li>
+          <li>
+            Finally, a list of five beers with alcohol percentages above the
+            specified percentage are displays to the right!
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- End Nick Loeffler 3-26 -->
+  </body>
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="script.js"></script>
 </html>
-

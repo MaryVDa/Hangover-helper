@@ -61,3 +61,8 @@ body {
   height: 3vh;
   border-radius: 10%;
 }
+
+footer {
+  position: fixed;
+  bottom: 0px;
+}
