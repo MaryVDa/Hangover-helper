@@ -36,13 +36,13 @@ body {
   flex: 1;
   margin-top: 20vh;
   background-color: rgb(255, 255, 0);
-  border: 2px solid BLACK;
+  /* border: 2px solid BLACK; */
   text-align: center;
 }
 
 /* Left Side (Search) */
 .flex-child:first-child {
-  height: 210px;
+  height: fit-content;
   border-radius: 10%;
   margin-left: 5%;
   margin-right: 5%;
@@ -50,7 +50,7 @@ body {
 
 /* Right Side (Results) */
 .flex-child:nth-child(2) {
-  height: 500px;
+  height: fit-content;
   border-radius: 10%;
   margin-left: 5%;
   margin-right: 5%;
