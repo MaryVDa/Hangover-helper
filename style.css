@@ -7,10 +7,16 @@ h1 {
   text-align: center;
 }
 
+img {
+  width: 35px;
+  height: 35px;
+}
+
 .mb-3 {
   text-align: center;
   background-color: rgb(255, 255, 0);
 }
+
 
 main {
   height: 100%;
@@ -34,7 +40,7 @@ body {
 
 .flex-child {
   flex: 1;
-  margin-top: 20vh;
+  margin-top: 5vh;
   background-color: rgb(255, 255, 0);
   /* border: 2px solid BLACK; */
   text-align: center;
