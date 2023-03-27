@@ -1,4 +1,4 @@
-# <Hangover-Helper>
+# Hangover Helper
 
 ## Description
 
