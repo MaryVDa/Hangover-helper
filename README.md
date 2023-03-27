@@ -8,7 +8,7 @@ We wanted to build this web application to solve two common problems, that usual
 
 Hangover Helper is meant to be used to look up bars near a city and beers above a certain ABV%. The way you would search up a brewery is by typing a city name, such as Detroit, into the text box below "Enter A City Name" and then left clicking the button just below that. This is going to display a number of breweries in that city to the right using JavaScript paired with the Open Brewery API. The way to find a beer with an ABV above a certain percentage: the user is going to do almost the same exact same thing here, except a city name they will enter a numerical value into the search bar underneath "Enter an ABV%." Left clicking the "Home" button in the top right will reset the page so that anything searched will disappear, making it less cluttered if too many things are searched. The "About Us" button displays a modal with some information about our team that developed this wonderful application. The user can also click the "How it Works" button to display a modal with all of the information displayed here as well.
 
-Link to the deployed web application: zzzzzzzzzzzzzzzzzz
+Link to the deployed web application:  https://maryvda.github.io/Hangover-helper/
 
 ![Hangover Helper Home Page](./images/hangover-helper-1.png)
 
