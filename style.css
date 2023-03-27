@@ -1,0 +1,74 @@
+html {
+  background-color: #a87027fd;
+  width: 100%;
+  height: 100vh;
+}
+h1 {
+  text-align: center;
+}
+
+img {
+  width: 35px;
+  height: 35px;
+}
+
+.mb-3 {
+  text-align: center;
+  background-color: rgb(255, 255, 0);
+}
+
+
+main {
+  height: 100%;
+}
+
+body {
+  height: 89vh;
+}
+
+.results-area {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* SIDE BY SIDE DIVS */
+
+.flex-container {
+  display: flex;
+}
+
+.flex-child {
+  flex: 1;
+  margin-top: 5vh;
+  background-color: rgb(255, 255, 0);
+  /* border: 2px solid BLACK; */
+  text-align: center;
+}
+
+/* Left Side (Search) */
+.flex-child:first-child {
+  height: fit-content;
+  border-radius: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/* Right Side (Results) */
+.flex-child:nth-child(2) {
+  height: fit-content;
+  border-radius: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.input-box {
+  width: 20vh;
+  height: 3vh;
+  border-radius: 10%;
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+}

@@ -1,56 +1,198 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hangover Helper</title>
-    
+
     <!-- This will link Bulma styling to our webpage. -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
 
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    <header class="text-center header">
-    <h1>Hangover Helper</h1>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- ------ -->
+    <!-- HEADER -->
+    <!-- ------ -->
 
-    <nav>
-        <ul>
-            <li><a class = "button is-danger" href="index.html">Home</a></li>
-        </ul>
-    </nav>
-    </header>
-    <main class="container-fluid">
-        <div class="row">
-            <div class="col-md col-xl-4">
-                <div class="card mb-3">
-                <h2 class="">What is a hangover?</h2>
-                <div class="card-body">
-                <p class="card-text">
-                    A hangover is a group of unpleasant signs and symptoms that can occur after drinking too 
-                    much alcohol. The severity of the hangover depends on the amount of alcohol consumed, 
-                    the amount of water drunk, and the individual's metabolism. The most common symptoms 
-                    are headache, fatigue, dizziness, nausea, vomiting, sensitivity to light and sound, 
-                    and thirst. Other symptoms may include anxiety, confusion, depression, sweating, and 
-                    difficulty sleeping. The severity of the hangover can be reduced by drinking water, 
-                    eating food, and taking medications such as paracetamol or ibuprofen.</p>
-                </div>
-                </div>
-                <div>
-                    <h2 class="">Search a city name!</h2>
-                    <input type="text" id="brew-search" placeholder="e.g. Detroit">
-                    <!-- added id of "brew-btn" to the button for searching up breweries -->
-                    <button class = "button is-success" id="brew-btn">Brew up some bars!</button>
-                    <div id="results"></div>
-                </div>
-            </div>
+    <header>
+      <h1 class="is-size-1">Hangover Helper</h1>
+
+      <!-- ------ -->
+      <!-- NavBar -->
+      <!-- ------ -->
+
+      <nav class="navbar has-shadow container-fluid">
+        <!-- Logo(s) may go here -->
+
+        <div class="navbar-brand">
+          <a class="navbar-item -is size-1">
+            <img src="./images/quality.png" alt="Site Logo" />
+          </a>
+
+          <!-- DROP DOWN MENU -->
+          <a class="navbar-burger" id="burger">
+            <span> </span>
+            <span> </span>
+            <span> </span>
+          </a>
         </div>
 
+        <!-- NavBar Links -->
+
+        <div class="navbar-menu" id="nav-links">
+          <div class="navbar-end"></div>
+          <a class="navbar-item"onClick="window.location.reload();">Home</a> <!-- Refresh Button -->
+          <a class="navbar-item is-success" id="how-to">How it Works</a>
+          <a class="navbar-item" id="about">About Us</a>
+        </div>
+      </nav>
+
+      <!-- ------- -->
+      <!-- MAIN MESSAGE -->
+      <!-- ------- -->
+
+      <!-- ------- -->
+      <!-- MAIN MESSAGE -->
+      <!-- ------- -->
+    </header>
+    <main class="container-fluid">
+      <div class="row">
+        <div class="col-md col-xl-4">
+          <div class="card mb-3 py-4 px-6">
+            <h2 class="is-size-4">What is a Hangover?</h2>
+            <div class="card-body">
+              <p class="card-text py-4">
+                A hangover is a group of unpleasant signs and symptoms that can
+                occur after drinking too much alcohol. The severity of the
+                hangover depends on the amount of alcohol consumed, the amount
+                of water drunk, and the individual's metabolism. The most common
+                symptoms are headache, fatigue, dizziness, nausea, vomiting,
+                sensitivity to light and sound, and thirst. Other symptoms may
+                include anxiety, confusion, depression, sweating, and difficulty
+                sleeping. The severity of the hangover can be reduced by
+                drinking water, eating food, and taking medications such as
+                paracetamol or ibuprofen.
+              </p>
+            </div>
+          </div>
+          <div></div>
+        </div>
+      </div>
+      <!-- ------ -->
+      <!-- MAIN CONTENT -->
+      <!-- ------ -->
+      <div class="main-content">
+        <div class="flex-container">
+          <!-- SEARCH -->
+
+          <div class="search flex-child">
+            <div class="bar-search">
+              <!-- City Search Box  -->
+
+              <div class="by-city py-3">
+                <h2>Enter a City Name</h2>
+                <input
+                  class="input-box"
+                  type="text"
+                  id="brew-search"
+                  placeholder="e.g. Detroit"
+                />
+              </div>
+
+              <!-- Search button for breweries -->
+              <button class="button is-success is-light " id="brew-btn">
+                Check out some Bars!
+              </button>
+
+              <!-- ABV Search Box -->
+
+              <div class="by-abv py-3">
+                <h2>Enter an ABV%</h2>
+                <input
+                  class="input-box"
+                  type="text"
+                  id="beer-value"
+                  placeholder="e.g. 5.0"
+                />
+              </div>
+
+              <!-- Search Button For ABV -->
+              <button class="button is-primary is-light" id="beer-btn">
+                Brew up some Beers!
+              </button>
+            </div>
+          </div>
+          <!-- RESULTS -->
+
+          <div class="results flex-child">
+            <div class="results-area" id="results-area">
+              <h2></h2>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
-    
-    
+    <!-- ------ -->
+    <!-- FOOTER -->
+    <!-- ------ -->
     <footer class="">
-        <p>Hangover Helper &copy; 2023</p>
-    <script src="js/script.js"></script>
-</body>
+      <p>Hangover Helper &copy; 2023</p>
+    </footer>
+
+    <!--MODAL-->
+    <div class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content has-background-white py-5 px-5">
+        <h2 class="title is-spaced mb-6">About Us</h3>
+        <h3 class="subtitle is-spaced center">The purpose of this website is to find bars , beers & breweries near you ! </h3>
+          <h4 class=""> Hangover Helper was a created with collaborative effort by 4 programming students for project 1 of the MSU Coding Bootcamp.</h4>
+      </div>
+    </div>
+
+    <!-- Modal #2 -->
+    <!-- Nick Loeffler 3-26 -->
+
+    <div class="modal" id="modal2">
+      <div class="modal-background" id="how-bg"></div>
+      <div class="modal-content has-background-white py-5 px-5">
+        <h3 class="title is-spaced mb-6">How it Works</h3>
+        <h4 class="subtitle is-spaced is-5">How to find breweries</h4>
+        <ul>
+          <li>1. Figure out what city you'll be drinking in tonight.</li>
+          <li>
+            2. Locate the search bar titled "Enter a City Name" and type your
+            city.
+          </li>
+          <li>3. Click the "Check out some Bars!" button.</li>
+          <li>
+            Finally, a list of 5 bars in or near that city will now be displayed
+            to the right hand side!
+          </li>
+        </ul>
+
+        <h4 class="subtitle is-spaced is-5">
+          How to find beers above a certain ABV
+        </h4>
+        <ul>
+          <li>1. Think of the right ABV percentage for the night.</li>
+          <li>
+            2. Locate the search bar titled "Enter an ABV%" and type your
+            percentage in the search bar, using numbers.
+          </li>
+          <li>3. Click the "Brew up some Beers!" button</li>
+          <li>
+            Finally, a list of five beers with alcohol percentages above the
+            specified percentage are displays to the right!
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- End Nick Loeffler 3-26 -->
+  </body>
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="script.js"></script>
 </html>
