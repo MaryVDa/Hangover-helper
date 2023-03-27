@@ -30,7 +30,7 @@
 
         <div class="navbar-brand">
           <a class="navbar-item -is size-1">
-            <img src="/images/quality.png" alt="Site Logo" />
+            <img src="./images/quality.png" alt="Site Logo" />
           </a>
 
           <!-- DROP DOWN MENU -->
@@ -45,8 +45,8 @@
 
         <div class="navbar-menu" id="nav-links">
           <div class="navbar-end"></div>
+          <a class="navbar-item"onClick="window.location.reload();">Home</a> <!-- Refresh Button -->
           <a class="navbar-item is-success" id="how-to">How it Works</a>
-          <a class="navbar-item">option 2</a>
           <a class="navbar-item" id="about">About Us</a>
         </div>
       </nav>
@@ -93,7 +93,7 @@
             <div class="bar-search">
               <!-- City Search Box  -->
 
-              <div class="by-city">
+              <div class="by-city py-3">
                 <h2>Enter a City Name</h2>
                 <input
                   class="input-box"
@@ -104,7 +104,7 @@
               </div>
 
               <!-- Search button for breweries -->
-              <button class="button is-success is-light" id="brew-btn">
+              <button class="button is-success is-light " id="brew-btn">
                 Check out some Bars!
               </button>
 
@@ -130,7 +130,7 @@
 
           <div class="results flex-child">
             <div class="results-area" id="results-area">
-              <h2>Results go here</h2>
+              <h2></h2>
             </div>
           </div>
         </div>
@@ -141,23 +141,15 @@
     <!-- ------ -->
     <footer class="">
       <p>Hangover Helper &copy; 2023</p>
-
-      <a href="https://www.flaticon.com/free-icons/beer" title="beer icons"
-        >Beer icons created by dDara - Flaticon</a
-      >
-      <a href="https://www.flaticon.com/free-icons/beer" title="beer icons"
-        >Beer icons created by dDara - Flaticon</a
-      >
-      <a href="https://www.flaticon.com/free-icons/beer" title="beer icons"
-        >Beer icons created by dDara - Flaticon</a
-      >
     </footer>
 
     <!--MODAL-->
     <div class="modal">
       <div class="modal-background"></div>
       <div class="modal-content has-background-white py-5 px-5">
-        <h3 class="title mb-6">About Us</h3>
+        <h2 class="title is-spaced mb-6">About Us</h3>
+        <h3 class="subtitle is-spaced center">The purpose of this website is to find bars , beers & breweries near you ! </h3>
+          <h4 class=""> Hangover Helper was a created with collaborative effort by 4 programming students for project 1 of the MSU Coding Bootcamp.</h4>
       </div>
     </div>
 
