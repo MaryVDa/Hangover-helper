@@ -124,16 +124,16 @@ function getAPIData(beer) {
     .then((response) => {
       console.log(response);
       const resultsArea = document.querySelector("#results-area");
-
+      // This for loop will create the cards and set up what will be pulled from the API using "function getAPIData(beer)"
       for (let index = 0; index < response.length; index++) {
         const beer = response[index];
-        var beerCard = `<div class="card has-background-success" style="width:15rem; height:auto; margin:8px;">
-        <div class="card-content">
-        <h5 class="card-header">${beer.name}</h5>
-        <p class="card-text">ABV: ${beer.abv}</p>
-        <p class="card-text">Tagline: ${beer.tagline}</p>
+        var beerCard = `<div class="card  has-background-grey-dark" style="width:15rem; height:auto; margin:8px;">
+        <div class="card-content has-text-white-ter">
+        <h5 class="card-header has-background-success-light has-text-black">${beer.name}</h5>
+        <p class="card-text">${beer.abv} ABV%</p>
+        <p class="card-text">${beer.tagline}</p>
         <p class="card-text">Description: ${beer.description}</p>
-        <img src=${beer.image_url} alt=${beer.tagline}/>
+        <img style="height: 10rem; width: 3.5rem"src=${beer.image_url} alt=${beer.tagline}/>
         </div>
         `;
         resultsArea.innerHTML += beerCard;
