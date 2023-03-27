@@ -59,9 +59,9 @@ function searchResult(city){
     
     for (let index = 0; index < response.length; index++) {
       const city = response[index];
-      var cityCard = `<div class="card has-background-success" style="width:15rem; height:auto; margin:8px;">
-        <div class="card-content">
-        <h5 class="card-header">${city.name}</h5>
+      var cityCard = `<div class="card has-background-grey-dark" style="width:auto; height:auto; margin:8px;">
+        <div class="card-content has-text-white-ter">
+        <h5 class="card-header has-background-success-light has-text-black">${city.name}</h5>
         <p class="card-text">Address: ${city.address_1}</p>
         <p class="card-text">City: ${city.city}</p>
         <p class="card-text">Website: ${city.website_url}</p>
