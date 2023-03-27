@@ -43,35 +43,58 @@ brewButton.addEventListener("click", () => {
   brewButton.classList.toggle("is-success");
 });
 
-// creates the variable for the #brew-btn
-var searchFormEl = document.querySelector("#brew-btn");
 
-var city = "";
-var searchCity = $("#search");
-var currentCity = $("#results");
+
+//Open Brewery API
+//Mary Dault 3/26 JS
+
+function searchResult(city){  
+  var brewURL= `https://api.openbrewerydb.org/v1/breweries?by_city=${city}&per_page=5`;
+
+  fetch(brewURL)
+  .then((result) => result.json())
+  .then(response => { 
+    console.log(response); 
+    const resultsArea = document.querySelector("#results-area");
+    
+    for (let index = 0; index < response.length; index++) {
+      const city = response[index];
+      var cityCard = `<div class="card has-background-success" style="width:15rem; height:auto; margin:8px;">
+        <div class="card-content">
+        <h5 class="card-header">${city.name}</h5>
+        <p class="card-text">Address: ${city.address_1}</p>
+        <p class="card-text">City: ${city.city}</p>
+        <p class="card-text">Website: ${city.website_url}</p>
+        </div>
+        `;
+        resultsArea.innerHTML += cityCard;
+    }
+  })  
+}
+
+
+
+var searchBreweryEl = document.querySelector("#brew-btn");
 
 function displayBreweries(event) {
   event.preventDefault();
-  if (searchCity.val().trim() !== "") {
-    city = searchCity.val().trim();
-    searchResult(city);
-  }
+  
+  var searchInputVal = document.querySelector("#brew-search").value;
+
+  if(!searchInputVal) console.log("Submit a city name!");
+
+  console.log("You submitted a city!");
+  searchResult(searchInputVal);
+  var localSt = JSON.parse(localStorage.getItem("citySearchHistory")) || [];
+
+  localSt.push(searchInputVal);
+  localStorage.setItem("citySearchHistory", JSON.stringify(localSt));
 }
 
-function searchResult(city) {
-  var queryURL =
-    "https://api.openbrewerydb.org/breweries?q=" + "by_city" + "=&per_page=3";
-  $.ajax({
-    url: queryURL,
-    method: "GET",
-  }).then(function (response) {
-    console.log(response);
+//event listener
+searchBreweryEl.addEventListener("click", displayBreweries);
 
-    $(currentCity).html(response.name);
-  });
-}
 
-$("#search").on("click", displayBreweries);
 // Punk API
 // Nick Loeffler 3-25 JS
 var searchBeerEl = document.querySelector("#beer-btn");
@@ -119,4 +142,3 @@ function getAPIData(beer) {
 }
 //End Nick Loeffler 3-24 JS
 
-$("#brew-search").on("click", displayBreweries);
